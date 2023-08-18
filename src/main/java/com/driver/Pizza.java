@@ -5,7 +5,7 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private int basePrice;
-    private String bill="";
+    private String bill;
 
     private final int extracheese=80;
 
