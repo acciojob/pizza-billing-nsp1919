@@ -66,14 +66,14 @@ public class Pizza {
         // your code goes here
         if (!isBillGenerated) {
             this.bill = "Base Price Of The Pizza: " + this.basePrice + "\n";
-            if (addextracheese)
+            if (this.addextracheese)
                 this.bill = this.bill + "Extra Cheese Added: " + this.extracheese + "\n";
-            if (addextratoppings)
+            if (this.addextratoppings)
                 this.bill = this.bill + "Extra Toppings Added: " + this.extratoppings + "\n";
-            if (addbag)
+            if (this.addbag)
                 this.bill = this.bill + "Paperbag Added: " + this.bag + "\n";
             this.bill = this.bill + "Total Price: " + this.price;
-            isBillGenerated = true;
+            this.isBillGenerated = true;
         }
         return this.bill;
     }
