@@ -12,84 +12,19 @@ public class Pizza {
     private int extratoppings;
 
     private final int bag=20;
-    private int total=0;
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
 
-    public Boolean getVeg() {
-        return isVeg;
-    }
 
-    public void setVeg(Boolean veg) {
-        isVeg = veg;
-    }
-
-    public void setBill(String bill) {
-        this.bill = bill;
-    }
-
-    public int getExtracheese() {
-        return extracheese;
-    }
-
-    public int getExtratoppings() {
-        return extratoppings;
-    }
-
-    public void setExtratoppings(int extratoppings) {
-        this.extratoppings = extratoppings;
-    }
-
-    public int getBag() {
-        return bag;
-    }
-
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
-    public boolean isAddextracheese() {
-        return addextracheese;
-    }
-
-    public void setAddextracheese(boolean addextracheese) {
-        this.addextracheese = addextracheese;
-    }
-
-    public boolean isAddextratoppings() {
-        return addextratoppings;
-    }
-
-    public void setAddextratoppings(boolean addextratoppings) {
-        this.addextratoppings = addextratoppings;
-    }
-
-    public boolean isAddbag() {
-        return addbag;
-    }
-
-    public void setAddbag(boolean addbag) {
-        this.addbag = addbag;
-    }
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
-
         if (this.isVeg){
             this.basePrice=300;
             this.extratoppings=70;
-
         }
         else{
             this.basePrice=400;
-            this.extratoppings=80;
-
+            this.extratoppings=120;
         }
         this.price=this.basePrice;
     }
@@ -114,7 +49,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if (!addextratoppings){
-            this.total+=this.extratoppings;
+            this.price+=this.extratoppings;
             addextratoppings=true;
         }
     }
@@ -122,7 +57,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if (!addbag){
-            this.total+=this.bag;
+            this.price+=this.bag;
             addbag=true;
         }
     }
@@ -137,7 +72,7 @@ public class Pizza {
             this.bill=this.bill+"Extra Toppings Added: "+this.extratoppings+"\n";
         if (addbag)
             this.bill=this.bill+"Paperbag Added: "+this.bag+"\n";
-        this.bill=this.bill+"Total Price: "+total;
+        this.bill=this.bill+"Total Price: "+this.price;
         return this.bill;
     }
 }
