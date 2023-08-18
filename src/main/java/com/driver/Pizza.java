@@ -67,12 +67,12 @@ public class Pizza {
         if (!isBillGenerated) {
             this.bill = "Base Price Of The Pizza: " + this.basePrice + "\n";
             if (this.addextracheese)
-                this.bill = this.bill + "Extra Cheese Added: " + this.extracheese + "\n";
+                this.bill+="Extra Cheese Added: " + this.extracheese + "\n";
             if (this.addextratoppings)
-                this.bill = this.bill + "Extra Toppings Added: " + this.extratoppings + "\n";
+                this.bill+="Extra Toppings Added: " + this.extratoppings + "\n";
             if (this.addbag)
-                this.bill = this.bill + "Paperbag Added: " + this.bag + "\n";
-            this.bill = this.bill + "Total Price: " + this.price;
+                this.bill+="Paperbag Added: " + this.bag + "\n";
+            this.bill+="Total Price: " + this.price;
             this.isBillGenerated = true;
         }
         return this.bill;
