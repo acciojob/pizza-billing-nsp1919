@@ -5,7 +5,7 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private int basePrice;
-    private String bill;
+    private String bill="";
 
     private final int extracheese=80;
 
@@ -66,14 +66,14 @@ public class Pizza {
         // your code goes here
         if (!isBillGenerated) {
             this.bill = "Base Price Of The Pizza: " + this.basePrice + "\n";
-            if (this.addextracheese)
-                this.bill+="Extra Cheese Added: " + this.extracheese + "\n";
-            if (this.addextratoppings)
-                this.bill+="Extra Toppings Added: " + this.extratoppings + "\n";
-            if (this.addbag)
-                this.bill+= "Paperbag Added: " + this.bag + "\n";
-            this.bill+="Total Price: " + this.price+"\n";
-            this.isBillGenerated = true;
+            if (addextracheese)
+                this.bill = this.bill + "Extra Cheese Added: " + this.extracheese + "\n";
+            if (addextratoppings)
+                this.bill = this.bill + "Extra Toppings Added: " + this.extratoppings + "\n";
+            if (addbag)
+                this.bill = this.bill + "Paperbag Added: " + this.bag + "\n";
+            this.bill = this.bill + "Total Price: " + this.price;
+            isBillGenerated = true;
         }
         return this.bill;
     }
